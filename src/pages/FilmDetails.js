@@ -56,7 +56,7 @@ function FilmDetails() {
             <p><strong>Rating:</strong> {film.rating}</p>
             <p><strong>Category:</strong> {film.category}</p>
             <p><strong>Length:</strong> {film.length} minutes</p>
-            <p><strong>Language:</strong> {film.language}</p>
+            <p><strong>Rental Rate:</strong> ${film.rental_rate}</p>
           </div>
         </div>
       </div>

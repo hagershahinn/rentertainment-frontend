@@ -66,14 +66,16 @@ function Films() {
     try {
       const response = await filmsAPI.rentFilm(selectedFilm.film_id, customerInfo);
       if (response.success) {
-        alert('Movie rented successfully!');
+        alert(`✓ "${selectedFilm.title}" has been rented successfully!\n\nCustomer: ${customerInfo.firstName} ${customerInfo.lastName}`);
         setRentalMode(false);
         setSelectedFilm(null);
         setCustomerInfo({ firstName: '', lastName: '', email: '' });
+      } else {
+        alert('Error: Unable to rent movie. Please try again.');
       }
     } catch (error) {
       console.log('error:', error);
-      alert('Error renting movie');
+      alert('Error: Unable to rent movie. Please try again.');
     }
   };
 
