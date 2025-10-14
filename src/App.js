@@ -5,6 +5,8 @@ import Landing from './pages/Landing';
 import Films from './pages/Films';
 import FilmDetails from './pages/FilmDetails';
 import ActorDetails from './pages/ActorDetails';
+import Customers from './pages/Customers';
+import CustomerDetails from './pages/CustomerDetails';
 import './App.css';
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
           <Route path="/films" element={<Films />} />
           <Route path="/films/:id" element={<FilmDetails />} />
           <Route path="/actors/:id" element={<ActorDetails />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/customers/:id" element={<CustomerDetails />} />
         </Routes>
       </Layout>
     </Router>

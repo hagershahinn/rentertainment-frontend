@@ -8,6 +8,7 @@ function Layout({ children }) {
         <div className="container">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/films" className="nav-link">Movies</Link>
+          <Link to="/customers" className="nav-link">Customers</Link>
         </div>
       </nav>
       <main className="container">

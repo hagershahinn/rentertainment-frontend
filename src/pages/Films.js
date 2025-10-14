@@ -71,11 +71,12 @@ function Films() {
         setSelectedFilm(null);
         setCustomerInfo({ firstName: '', lastName: '', email: '' });
       } else {
-        alert('Error: Unable to rent movie. Please try again.');
+        alert(response.message || 'Unable to rent movie. Please try again.');
       }
     } catch (error) {
       console.log('error:', error);
-      alert('Error: Unable to rent movie. Please try again.');
+      const errorMessage = error.response?.data?.message || 'Unable to rent movie. Please try again.';
+      alert(errorMessage);
     }
   };
 
